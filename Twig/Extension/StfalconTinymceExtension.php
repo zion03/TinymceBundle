@@ -70,8 +70,7 @@ class StfalconTinymceExtension extends \Twig_Extension
      */
     public function tinymce_init()
     {
-
-        $config = $this->getParameter('stfalcon_tinymce.config');
+        $config  = $this->getParameter('stfalcon_tinymce.config');
         $baseURL = (!isset($config['base_url']) ? null : $config['base_url']);
 
         /** @var $assets \Symfony\Component\Templating\Helper\CoreAssetsHelper */
@@ -91,8 +90,8 @@ class StfalconTinymceExtension extends \Twig_Extension
 
         // If the language is not set in the config...
         if (!isset($config['language']) || empty($config['language'])) {
-            // get it from the request
-            $config['language'] = $this->getService('request')->getLocale();
+            // get it from the session
+            $config['language'] = $this->getService('session')->getLocale();
         }
 
         // Check the language code and trim it to 2 symbols (en_US to en, ru_RU to ru, ...)
