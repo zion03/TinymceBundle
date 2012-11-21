@@ -1,19 +1,10 @@
 # TinymceBundle
 
 Bundle is destined to add TinyMCE WYSIWYG editor to your Symfony2 project.
-By analogy with the bundle https://github.com/ihqs/WysiwygBundle
 
 ## Installation
 
-Download the code by adding the git module or editing the deps file in the root project.
-
-### Download via git submodule
-
-```bash
-    git submodule add git://github.com/stfalcon/TinymceBundle.git vendor/bundles/Stfalcon/Bundle/TinymceBundle
-```
-
-### Download by editing deps file
+### Installation by Composer
 
 If you use composer add TinyMCE bundle as dependencies to the composer.json of your application
 
@@ -33,21 +24,11 @@ If you use composer add TinyMCE bundle as dependencies to the composer.json of y
         ...
     },
 
-If you prefer standard vendor installer then add dependencies to deps file
+### Installation via git submodule
 
-#### for Symfony 2.1
-
-    [TinymceBundle]
-        git=git://github.com/stfalcon/TinymceBundle.git
-        target=/bundles/Stfalcon/Bundle/TinymceBundle
-
-#### for Symfony 2.0
-
-    [TinymceBundle]
-        git=git://github.com/stfalcon/TinymceBundle.git
-        target=/bundles/Stfalcon/Bundle/TinymceBundle
-        version=2.0.x
-
+```bash
+    git submodule add git://github.com/stfalcon/TinymceBundle.git vendor/bundles/Stfalcon/Bundle/TinymceBundle
+```
 
 ## Register namespace
 
@@ -164,6 +145,7 @@ According to oficial documentation you can configure your editor as you wish. Th
         include_jquery: true
         tinymce_jquery: true
         textarea_class: "tinymce"
+        base_url: "http://yourdomain.com/" # this parameter may be included if you need to override the assets_base_urls for your template engine (to override a CDN base url)
         # Get current language from the parameters.ini
         language: %locale%
         # Custom buttons
