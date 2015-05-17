@@ -1,5 +1,5 @@
 tinymce.addI18n('fr_FR',{
-	'SH4TinyMCE - Code Editor'	: 'SH4TinyMCE - Editeur de code',
+	'SH4TinyMCE - Code Editor'	: 'Editeur de code',
 	'Insert/Edit Code'			: 'Ins\u00e9rer/Editer Code',
 	'Language'					: 'Langage',
 	'Auto links'				: 'Liens cliquables',
@@ -8,5 +8,5 @@ tinymce.addI18n('fr_FR',{
 	'Toolbar'					: 'Menu',
 	'Highlight'					: 'Highlight',
 	'Tab size'					: 'Tabulation',
-	'First Line'				: '1\u00e8re ligne',
+	'First Line'				: '1\u00e8re ligne'
 });
